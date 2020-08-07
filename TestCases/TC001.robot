@@ -1,7 +1,9 @@
 *** Settings ***
 Library  SeleniumLibrary
+Library  OperatingSystem
 
 *** Variables ***
+${EXECDIR}  C:\Users\CHANDRASEKHARJANGA\PycharmProjects\TestProject\Drivers\chromedriver.exe
 ${browser}    chrome
 ${url}        https://demo.nopcommerce.com/
 ${username}     jcsreddy@gmail.com
