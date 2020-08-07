@@ -12,7 +12,7 @@ ${password}     123india
 
 *** Test Cases ***
 LoginTest
-    #create webdriver  chrome    executable_path = "/TestProject/Drivers/chromedriver.exe"
+#    create webdriver  ${browser}    executable_path = 'C:\Users\CHANDRASEKHARJANGA\PycharmProjects\TestProject\Drivers\chromedriver.exe'
     open browser    ${url}      ${browser}
     loginToApplication
     close browser
@@ -61,4 +61,4 @@ loginToApplication
     ${"loginbutton_enabled}     set variable    xpath=//input[@class='button-1 login-button']
     element should be enabled  ${"loginbutton_enabled}
     click button    ${"loginbutton_enabled}
-    capture page screenshot  
+    capture page screenshot
