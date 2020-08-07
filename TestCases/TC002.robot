@@ -33,7 +33,7 @@ Validate Checkbox Radiobutton List Dropdown
 
     capture page screenshot
 
-    log  Test Completed
+    log  Test Completed today
 
     close browser
 
