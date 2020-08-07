@@ -33,6 +33,8 @@ Validate Checkbox Radiobutton List Dropdown
 
     capture page screenshot
 
+    log  Test Completed
+
     close browser
 
 *** Keywords ***
