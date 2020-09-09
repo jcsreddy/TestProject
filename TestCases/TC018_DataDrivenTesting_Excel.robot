@@ -1,6 +1,6 @@
 *** Settings ***
 Library     SeleniumLibrary
-Library     DataDriver  ../TestData/LoginData.xlsx  sheet_name  =   Sheet1
+Library     DataDriver  file=../TestData/LoginData.xlsx  sheet_name=Sheet1
 Resource    ../Resources/login_resources.robot
 
 Suite Setup     Open My Browser
