@@ -8,7 +8,7 @@ Suite Teardown  Close Browsers
 Test Template   InvalidLogin
 
 *** Test Cases ***
-LoginTestWithCSV  ${username} and ${password}            #supports robotframework-datadriver 0.3.1
+LoginTestWithCSV  ${username}  ${password}            #supports robotframework-datadriver 0.3.1
 
 *** Keywords ***
 InvalidLogin

@@ -1,15 +1,11 @@
 *** Settings ***
 Library     SeleniumLibrary
-Resource    ../Resources/login_resources.robot
 Library     DataDriver  ../TestData/LoginData.xlsx  sheet_name  =   Sheet1
+Resource    ../Resources/login_resources.robot
 
 Suite Setup     Open My Browser
 Suite Teardown  Close Browsers
 Test Template   InvalidLogin
-
-#*** variables ***
-#${username}=null
-#${password}=null
 
 *** Test Cases ***
 LoginTestWithExcel  ${username}  ${password}            #supports robotframework-datadriver 0.3.1
