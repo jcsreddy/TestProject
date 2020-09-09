@@ -7,8 +7,12 @@ Suite Setup     Open My Browser
 Suite Teardown  Close Browsers
 Test Template   InvalidLogin
 
+#*** variables ***
+#${username}=null
+#${password}=null
+
 *** Test Cases ***
-LoginTestWithExcel  ${username} and ${password}            #supports robotframework-datadriver 0.3.1
+LoginTestWithExcel  ${username}  ${password}            #supports robotframework-datadriver 0.3.1
 
 *** Keywords ***
 InvalidLogin
