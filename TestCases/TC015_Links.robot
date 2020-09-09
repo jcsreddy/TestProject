@@ -11,10 +11,11 @@ LinkTest
     log to console  ${linkscount}
 
     #get test from each link
-    @{linkItems}    create list
-    FOR     ${j}    IN  RANGE   1   ${linkscount}+1
-        log to console  ${j}
-        ${linktext}=  get text  xpath=(//a)[${j}]
-        log to console      ${linktext}
-    END
+#    @{linkItems}    create list
+#    FOR     ${j}    IN  RANGE   1   ${linkscount}+1
+#        log to console  ${j}
+#        ${linktext}=  get text  xpath=(//a)[${j}]
+#        log to console      ${linktext}
+#    END
 
+    close browser

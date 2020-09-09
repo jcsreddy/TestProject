@@ -1,125 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200811 13:03:43.939" rpa="false">
-<suite id="s1" name="TC016 HandleTables" source="C:\Users\CHANDRASEKHARJANGA\PycharmProjects\TestProject\TestCases\TC016_HandleTables.robot">
-<test id="s1-t1" name="HandleTables">
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200909 10:54:57.765" rpa="false">
+<suite id="s1" name="TC001" source="C:\Users\CHANDRASEKHARJANGA\PycharmProjects\TestProject\TestCases\TC001.robot">
+<test id="s1-t1" name="LoginTest">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
-<arg>http://testautomationpractice.blogspot.com/</arg>
-<arg>headless chrome</arg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
 </arguments>
-<msg timestamp="20200811 13:03:44.299" level="INFO">Opening browser 'headless chrome' to base url 'http://testautomationpractice.blogspot.com/'.</msg>
-<status status="PASS" starttime="20200811 13:03:44.298" endtime="20200811 13:03:55.855"></status>
+<msg timestamp="20200909 10:54:58.855" level="INFO">Opening browser 'chrome' to base url 'https://demo.nopcommerce.com/'.</msg>
+<status status="PASS" starttime="20200909 10:54:58.854" endtime="20200909 10:55:07.119"></status>
+</kw>
+<kw name="loginToApplication">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>nopCommerce demo store</arg>
+</arguments>
+<msg timestamp="20200909 10:55:07.135" level="INFO">Page title is 'nopCommerce demo store'.</msg>
+<status status="PASS" starttime="20200909 10:55:07.127" endtime="20200909 10:55:07.135"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//a[text()='Log in']</arg>
+</arguments>
+<msg timestamp="20200909 10:55:07.135" level="INFO">Clicking link 'xpath=//a[text()='Log in']'.</msg>
+<status status="PASS" starttime="20200909 10:55:07.135" endtime="20200909 10:55:09.022"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20200811 13:03:55.855" endtime="20200811 13:03:57.968"></status>
+<status status="PASS" starttime="20200909 10:55:09.022" endtime="20200909 10:55:11.502"></status>
 </kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<doc>Waits until ``text`` appears on current page.</doc>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
 <arguments>
-<arg>HTML Table</arg>
+<arg>nopCommerce demo store. Login</arg>
 </arguments>
-<status status="PASS" starttime="20200811 13:03:57.968" endtime="20200811 13:03:57.989"></status>
+<msg timestamp="20200909 10:55:11.651" level="INFO">Page title is 'nopCommerce demo store. Login'.</msg>
+<status status="PASS" starttime="20200909 10:55:11.503" endtime="20200909 10:55:11.651"></status>
 </kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<doc>Scrolls an element identified by ``locator`` into view.</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
-<arg>xpath=//table[@name='BookTable']</arg>
+<arg>id=Email</arg>
 </arguments>
-<status status="PASS" starttime="20200811 13:03:57.989" endtime="20200811 13:03:58.266"></status>
+<status status="PASS" starttime="20200909 10:55:11.652" endtime="20200909 10:55:11.701"></status>
 </kw>
-<kw name="Get Element Count" library="SeleniumLibrary">
-<doc>Returns number of elements matching ``locator``.</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
 <arguments>
-<arg>xpath=//table[@name='BookTable']/tbody/tr</arg>
+<arg>id=Password</arg>
 </arguments>
-<assign>
-<var>${rows}</var>
-</assign>
-<msg timestamp="20200811 13:03:58.286" level="INFO">${rows} = 7</msg>
-<status status="PASS" starttime="20200811 13:03:58.266" endtime="20200811 13:03:58.287"></status>
+<status status="PASS" starttime="20200909 10:55:11.701" endtime="20200909 10:55:11.768"></status>
 </kw>
-<kw name="Get Element Count" library="SeleniumLibrary">
-<doc>Returns number of elements matching ``locator``.</doc>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
 <arguments>
-<arg>xpath=//table[@name='BookTable']/tbody/tr[1]/th</arg>
+<arg>id=Email</arg>
 </arguments>
 <assign>
-<var>${cols}</var>
+<var>${"email_txt"}</var>
 </assign>
-<msg timestamp="20200811 13:03:58.305" level="INFO">${cols} = 4</msg>
-<status status="PASS" starttime="20200811 13:03:58.287" endtime="20200811 13:03:58.305"></status>
+<msg timestamp="20200909 10:55:11.769" level="INFO">${"email_txt"} = id=Email</msg>
+<status status="PASS" starttime="20200909 10:55:11.769" endtime="20200909 10:55:11.769"></status>
 </kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<doc>Returns the text value of element identified by ``locator``.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
 <arguments>
-<arg>xpath=//table[@name='BookTable']/tbody/tr[4]/td[3]</arg>
+<arg>${"email_txt"}</arg>
+</arguments>
+<msg timestamp="20200909 10:55:12.162" level="INFO">Element 'id=Email' is displayed.</msg>
+<status status="PASS" starttime="20200909 10:55:11.769" endtime="20200909 10:55:12.162"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified with ``locator`` is enabled.</doc>
+<arguments>
+<arg>${"email_txt"}</arg>
+</arguments>
+<status status="PASS" starttime="20200909 10:55:12.163" endtime="20200909 10:55:12.250"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>${"email_txt"}</arg>
+</arguments>
+<status status="PASS" starttime="20200909 10:55:12.250" endtime="20200909 10:55:12.332"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${"email_txt"}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20200909 10:55:12.332" level="INFO">Typing text 'jcsreddy@gmail.com' into text field 'id=Email'.</msg>
+<status status="PASS" starttime="20200909 10:55:12.332" endtime="20200909 10:55:12.519"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>id=Password</arg>
 </arguments>
 <assign>
-<var>${data}</var>
+<var>${"password_txt"}</var>
 </assign>
-<msg timestamp="20200811 13:03:58.337" level="INFO">${data} = Javascript</msg>
-<status status="PASS" starttime="20200811 13:03:58.305" endtime="20200811 13:03:58.337"></status>
+<msg timestamp="20200909 10:55:12.519" level="INFO">${"password_txt"} = id=Password</msg>
+<status status="PASS" starttime="20200909 10:55:12.519" endtime="20200909 10:55:12.520"></status>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
 <arguments>
-<arg>There are ${rows} rowns and ${cols} columns</arg>
+<arg>${"password_txt"}</arg>
 </arguments>
-<status status="PASS" starttime="20200811 13:03:58.337" endtime="20200811 13:03:58.337"></status>
+<msg timestamp="20200909 10:55:12.585" level="INFO">Element 'id=Password' is displayed.</msg>
+<status status="PASS" starttime="20200909 10:55:12.520" endtime="20200909 10:55:12.585"></status>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified with ``locator`` is enabled.</doc>
 <arguments>
-<arg>The data in table is...${data}</arg>
+<arg>${"password_txt"}</arg>
 </arguments>
-<status status="PASS" starttime="20200811 13:03:58.338" endtime="20200811 13:03:58.338"></status>
+<status status="PASS" starttime="20200909 10:55:12.585" endtime="20200909 10:55:12.644"></status>
 </kw>
-<kw name="Table Column Should Contain" library="SeleniumLibrary">
-<doc>Verifies table column contains text ``expected``.</doc>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
 <arguments>
-<arg>xpath=//table[@name='BookTable']</arg>
-<arg>2</arg>
-<arg>Author</arg>
+<arg>${"password_txt"}</arg>
 </arguments>
-<status status="PASS" starttime="20200811 13:03:58.338" endtime="20200811 13:03:58.384"></status>
+<status status="PASS" starttime="20200909 10:55:12.644" endtime="20200909 10:55:12.715"></status>
 </kw>
-<kw name="Table Row Should Contain" library="SeleniumLibrary">
-<doc>Verifies that table row contains text ``expected``.</doc>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
 <arguments>
-<arg>xpath=//table[@name='BookTable']/tbody/tr[3]/td[1]</arg>
-<arg>3</arg>
-<arg>Learn Java</arg>
+<arg>${"password_txt"}</arg>
+<arg>${password}</arg>
 </arguments>
-<status status="PASS" starttime="20200811 13:03:58.384" endtime="20200811 13:03:58.442"></status>
+<msg timestamp="20200909 10:55:12.716" level="INFO">Typing password into text field 'id=Password'.</msg>
+<status status="PASS" starttime="20200909 10:55:12.715" endtime="20200909 10:55:12.922"></status>
 </kw>
-<kw name="Table Cell Should Contain" library="SeleniumLibrary">
-<doc>Verifies table cell contains text ``expected``.</doc>
-<arguments>
-<arg>xpath=//table[@name='BookTable']</arg>
-<arg>5</arg>
-<arg>2</arg>
-<arg>Mukesh</arg>
-</arguments>
-<msg timestamp="20200811 13:03:58.508" level="INFO">Table cell contains 'Mukesh'.</msg>
-<status status="PASS" starttime="20200811 13:03:58.442" endtime="20200811 13:03:58.509"></status>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200909 10:55:13.407" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200909 10:55:12.922" endtime="20200909 10:55:13.408"></status>
 </kw>
-<kw name="Table Header Should Contain" library="SeleniumLibrary">
-<doc>Verifies table header contains text ``expected``.</doc>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
 <arguments>
-<arg>xpath=//table[@name='BookTable']</arg>
-<arg>BookName</arg>
+<arg>xpath=//input[@class='button-1 login-button']</arg>
 </arguments>
-<status status="PASS" starttime="20200811 13:03:58.509" endtime="20200811 13:03:58.563"></status>
+<assign>
+<var>${"loginbutton_enabled}</var>
+</assign>
+<msg timestamp="20200909 10:55:13.409" level="INFO">${"loginbutton_enabled} = xpath=//input[@class='button-1 login-button']</msg>
+<status status="PASS" starttime="20200909 10:55:13.408" endtime="20200909 10:55:13.409"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified with ``locator`` is enabled.</doc>
+<arguments>
+<arg>${"loginbutton_enabled}</arg>
+</arguments>
+<status status="PASS" starttime="20200909 10:55:13.409" endtime="20200909 10:55:13.469"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${"loginbutton_enabled}</arg>
+</arguments>
+<msg timestamp="20200909 10:55:13.470" level="INFO">Clicking button 'xpath=//input[@class='button-1 login-button']'.</msg>
+<status status="PASS" starttime="20200909 10:55:13.470" endtime="20200909 10:55:15.898"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200909 10:55:16.713" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200909 10:55:15.899" endtime="20200909 10:55:16.713"></status>
+</kw>
+<status status="PASS" starttime="20200909 10:55:07.126" endtime="20200909 10:55:16.714"></status>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20200811 13:03:58.563" endtime="20200811 13:04:00.617"></status>
+<status status="PASS" starttime="20200909 10:55:16.744" endtime="20200909 10:55:23.326"></status>
 </kw>
-<status status="PASS" starttime="20200811 13:03:44.298" endtime="20200811 13:04:00.617" critical="yes"></status>
+<status status="PASS" starttime="20200909 10:54:58.844" endtime="20200909 10:55:23.362" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20200811 13:03:43.942" endtime="20200811 13:04:00.618"></status>
+<status status="PASS" starttime="20200909 10:54:57.769" endtime="20200909 10:55:23.366"></status>
 </suite>
 <statistics>
 <total>
@@ -129,7 +192,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="TC016 HandleTables">TC016 HandleTables</stat>
+<stat pass="1" fail="0" id="s1" name="TC001">TC001</stat>
 </suite>
 </statistics>
 <errors>
