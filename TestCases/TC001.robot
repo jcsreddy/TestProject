@@ -39,6 +39,7 @@ loginToApplication
     title should be     nopCommerce demo store
     click link      xpath=//a[text()='Log in']
     maximize browser window
+    set selenium speed  1
     title should be     nopCommerce demo store. Login
     wait until page contains element  id=Email
     wait until page contains element  id=Password
