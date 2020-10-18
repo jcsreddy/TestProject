@@ -23,3 +23,5 @@ Navigation Test
 
     sleep   3
     close all browsers
+
+    #Added comments to TC008 to test GIT Pull in Team City
