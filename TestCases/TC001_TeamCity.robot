@@ -1,7 +1,7 @@
 *** Settings ***
 Library  SeleniumLibrary
 Library  Webdriver
-
+Library     SeleniumLibrary
 *** Variables ***
 
 *** Test Cases ***
