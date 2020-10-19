@@ -66,4 +66,4 @@ loginToApplication
     click button    ${"loginbutton_enabled}
     capture page screenshot
 
-    #included comment for testing
+    #included comment for testings
