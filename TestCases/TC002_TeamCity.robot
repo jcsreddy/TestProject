@@ -6,6 +6,7 @@ Library     SeleniumLibrary
 LoginTest
 
     open browser    https://salesforce.com      chrome
+    wait until page contains  salesforce
     close browser
 
 *** Keywords ***
