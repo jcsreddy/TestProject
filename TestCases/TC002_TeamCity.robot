@@ -8,7 +8,6 @@ Library     SeleniumLibrary
 LoginTest
 
     open browser    https://salesforce.com      chrome
-
     close browser
 
 *** Keywords ***
