@@ -65,3 +65,5 @@ loginToApplication
     element should be enabled  ${"loginbutton_enabled}
     click button    ${"loginbutton_enabled}
     capture page screenshot
+
+    #included comment for testing
